@@ -1,0 +1,103 @@
+// styles for tablet devices
+// and (max-width: 1024px)
+@media screen and (min-width: 600px) {
+    body {
+        form.content {
+            width: 80%;
+            display: grid;
+            grid-template-areas: "dep dest" "date submit";
+            grid-column: 50% 50%;
+
+            input {
+                margin: 1em 1em;
+                width: 80%;
+            }
+
+            #departure {
+                grid-area: dep;
+            }
+
+            #destination {
+                grid-area: dest;
+            }
+
+            #date {
+                grid-area: date;
+            }
+
+            #submit {
+                grid-area: submit;
+                width: 60%;
+                justify-self: center;
+            }
+        }
+    }
+
+    main {
+        article#loading {
+            grid-template-columns: none;
+        }
+
+        section article.content {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: auto;
+            grid-template-areas: "head head countdown countdown" "dest dest date date" "img img weather weather"
+                "img img  flight flight" "img img covid covid" ". . delete delete";
+
+            .head {
+                grid-area: head;
+                justify-self: center;
+            }
+
+            .destination {
+                grid-area: dest;
+                justify-self: center;
+            }
+
+            .date {
+                grid-area: date;
+                justify-self: center;
+            }
+
+            .countdown {
+                grid-area: countdown;
+                justify-self: center;
+            }
+
+            figure {
+                grid-area: img;
+                width: 100%;
+                justify-self: center;
+
+                img {
+                    width: 95%;
+                }
+            }
+
+            .weather {
+                grid-area: weather;
+                flex-direction: column;
+                justify-self: center;
+            }
+
+            .flight {
+                grid-area: flight;
+                justify-self: center;
+            }
+
+            .covid {
+                grid-area: covid;
+                text-align: center;
+                justify-self: center;
+            }
+
+            .button {
+                width: 20vw;
+                grid-area: delete;
+                justify-self: center;
+                justify-self: center;
+            }
+        }
+    }
+}
